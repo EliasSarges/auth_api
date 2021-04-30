@@ -6,9 +6,11 @@ const jwt = require("jsonwebtoken");
 
 module.exports = {
   async index(req, res) {
-    const data = await db("users");
+    const data = await db
+      .select("id", "first_name", "last_name", "email")
+      .from("users");
 
-    return res.json({ users: data });
+    return res.json(data);
   },
 
   async create(req, res) {
