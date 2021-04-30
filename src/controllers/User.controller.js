@@ -2,6 +2,8 @@ const db = require("../database/connection");
 
 module.exports = {
   async index(req, res) {
-    res.send("user controller");
+    const data = await db("users");
+
+    return res.json({ users: data });
   },
 };
