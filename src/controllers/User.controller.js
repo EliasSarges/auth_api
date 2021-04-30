@@ -40,9 +40,9 @@ module.exports = {
     } catch (error) {
       if (error.errno == 19) {
         return res.status(500).json({ erro: "email ja cadastrado!" });
-      } else {
-        return res.status(500).json({ erro: "algo deu errado!" });
       }
+
+      return res.status(500).json({ erro: "algo deu errado!" });
     }
   },
 };
