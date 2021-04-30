@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config src/index.js"
+    "dev": "nodemon -r dotenv/config server.js"
   },
-  "keywords": [],
+  "keywords": ["login", "authentication", "backend", "api", "rest", "auth api"],
   "author": "",
   "license": "ISC",
   "dependencies": {
