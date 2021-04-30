@@ -28,7 +28,7 @@ module.exports = {
       user.password = undefined;
 
       const token = jwt.sign({ user }, process.env.SECRET);
-      return res.header({ Authorization: token }).status(200).json({ user });
+      return res.header({ authorization: token }).status(200).json({ user });
     } catch (error) {
       return res.status(500).json({ erro: "algo deu errado" });
     }

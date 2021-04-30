@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config server.js"
+    "dev": "nodemon -r dotenv/config server.js", 
+    "teste": "node -r dotenv/config src/middlewares/Auth.Middleware"
+    
   },
   "keywords": ["login", "authentication", "backend", "api", "rest", "auth api"],
   "author": "",

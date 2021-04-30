@@ -36,7 +36,7 @@ module.exports = {
 
       const token = jwt.sign({ user }, process.env.SECRET);
 
-      return res.header({ Authorization: token }).status(201).json(user);
+      return res.header({ authorization: token }).status(201).json(user);
     } catch (error) {
       if (error.errno == 19) {
         return res.status(500).json({ erro: "email ja cadastrado!" });
