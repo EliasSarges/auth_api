@@ -1,13 +1,17 @@
+require("dotenv").config();
+
 module.exports = {
   development: {
-    client: "sqlite3",
+    client: "mysql2",
     connection: {
-      filename: "./src/database/dev.sqlite3",
+      host: process.env.DB_HOST,
+      user: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
     },
     migrations: {
       directory: "./src/database/migrations",
       tableName: "knex_migrations",
     },
   },
-  useNullAsDefault: true,
 };

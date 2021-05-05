@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config server.js", 
+    "dev": "nodemon -r dotenv/config server.js",
     "teste": "node -r dotenv/config src/middlewares/Auth.Middleware"
-    
   },
-  "keywords": ["login", "authentication", "backend", "api", "rest", "auth api"],
-  "author": "",
+  "keywords": [
+    "login",
+    "authentication",
+    "backend",
+    "api",
+    "rest",
+    "auth api"
+  ],
+  "author": "Elias Castro",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -18,10 +24,11 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.4",
+    "mysql2": "^2.2.5",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "sqlite3": "^5.0.2",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sqlite3": "^5.0.2"
   }
 }
